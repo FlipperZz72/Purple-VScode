@@ -1,0 +1,32 @@
+{
+  "name": "purple-theme-extension",
+  "displayName": "Purple Theme",
+  "description": "A beautiful purple color theme for Visual Studio Code.",
+  "version": "0.0.1",
+  "publisher": "your-name",
+  "engines": {
+    "vscode": "^1.50.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Purple Theme",
+        "uiTheme": "vs",
+        "path": "./themes/Purple Theme-color-theme.json"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "postinstall": "node ./out/cli.js"
+  },
+  "devDependencies": {
+    "typescript": "^4.0.0",
+    "vscode": "^1.50.0"
+  }
+}
